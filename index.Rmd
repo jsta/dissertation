@@ -12,13 +12,11 @@ github-repo: jsta/dissertation
 description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
 ---
 
-Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading `#`.
+# Preamble
 
-To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.name/tinytex/>.
+## Abstract
 
-```{r include=FALSE}
-# automatically create a bib database for R packages
-knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'
-), 'packages.bib')
-```
+## Acknowledgements
+
+## Dedication
+
