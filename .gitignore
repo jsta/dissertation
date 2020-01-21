@@ -1,0 +1,12 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+*.toc
+*.out
+*.lot
+*.lof
+*.aux
+*.log
+*.lol
