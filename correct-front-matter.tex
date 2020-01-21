@@ -1,0 +1,276 @@
+\documentclass[]{msu-thesis}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={Understanding Work With Data in Summer STEM Programs Through An Experience Sampling Method Approach},
+            pdfauthor={Joseph J. Stachelek},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{natbib}
+\bibliographystyle{apalike}
+\usepackage{longtable,booktabs}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+%\setlength{\droptitle}{-2em}
+%  \title{Understanding Work With Data in Summer STEM Programs Through An Experience Sampling Method Approach}
+%  \pretitle{\vspace{\droptitle}\centering\huge}
+%  \posttitle{\par}
+%  \author{Joseph J. Stachelek}
+%  \preauthor{\centering\large\emph}
+%  \postauthor{\par}
+%  \predate{\centering\large\emph}
+%  \postdate{\par}
+%  \date{2017-11-24}
+%
+
+\frontmatter
+%\pagenumbering{Roman}
+\newpage
+
+\newpage
+
+\pagebreak
+
+\pagebreak
+
+
+\usepackage{booktabs}
+\usepackage{amsthm}
+\makeatletter
+\def\thm@space@setup{%
+  \thm@preskip=8pt plus 2pt minus 4pt
+  \thm@postskip=\thm@preskip
+}
+\makeatother
+\setlength{\parindent}{4em}
+\setlength{\parskip}{0em}
+
+\title{Lakes, watersheds, continents}
+\author{Joseph J. Stachelek}
+\fieldofstudy{Fisheries and Wildlife}
+\dedication{This dissertation is dedicated to...}
+\date{2020}
+
+%%%%%% MSU-THESIS stuff
+% \usepackage[T1]{fontenc}
+% \usepackage{newtxtext,newtxmath} % If they want Times we’ll give them Times
+% \usepackage{amsmath}
+% \usepackage[]{natbib}
+% \bibliographystyle{unified}
+
+
+% If you need newlines in your title, you must use \protect\\
+% \title{Understanding Work With Data in Summer STEM Programs Through An Experience Sampling Method Approach}
+% \author{Joseph J. Stachelek}
+% \fieldofstudy{Educational Psychology and Educational Technology}
+% \dedication{This dissertation is dedicated to Katie and to Jonah, who (mostly) happily slept through most of its writing.}
+% \date{2018}
+\usepackage{listings}
+
+% \lstset{language=TeX,basicstyle={\ttfamily}}
+% \usepackage{lipsum}
+% \usepackage{xcolor}
+% \usepackage{gb4e}
+
+%\usepackage[bookmarksopenlevel=2,bookmarks=true]{hyperref} % not needed but here for testing
+%
+% \counterwithin{exx}{chapter}
+% \singlegloss
+
+% Uncomment the next line for single spaced examples with gb4e
+% patchcommand{\exe}{\SingleSpacing}{}
+
+% % This code is an example of how to set up a new list of
+% \newlistof{listoflistings}{lol}{List of Listings}
+% \newfloat[chapter]{listing}{lol}{Listing}
+% \newlistentry{listing}{lol}{0}
+% \renewcommand*{\cftlistingname}{Listing\space}
+% \renewcommand*{\cftlistingaftersnum}{\msucaptiondelim}
+
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tikz}
+\usepackage{tabu}
+\usepackage{threeparttable}
+
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{proposition}{Proposition}[section]
+\theoremstyle{definition}
+\newtheorem{example}{Example}[section]
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}[section]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{solution}{Solution}
+
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+
+\begin{document}
+%\maketitle
+
+\maketitlepage
+% Next make the abstract
+\begin{abstract}
+% Your abstract goes here.  Master's 1 page max. PhD 2 page max.
+Data-rich activities provide an opportunity to develop core competencies in both science and mathematics identified in curricular standards. Perhaps even more importantly work with data puts learners in the position to use data to ask and answer questions, a potentially empowering capability. Research on work with data has focused on cognitive outcomes and the development of specific practices at the student and classroom levels, and yet, little research has considered learners’ engagement. The present study explores learners engagement in work with data in the context of summer STEM programs. The aspects of work with data that are the focus of this study are: asking questions, observing phenomena, constructing measures and generating data, data modeling, and interpreting findings. Data from measures of learners' engagement was collected through the Experience Sampling Method (ESM) that involves asking learners at random intervals to answer short questions about their engagement to discover profiles of learners' engagement.
+Data was collected from nine summer STEM programs over four weeks in the Northeastern United States. 203 learners reported 2,970 responses via short ESM surveys of how engaged they were (cognitively, behaviorally, and affectively, assessed through separate items) and of their perceptions of themselves (their competence) and the activity (its challenge).  These data were used to examine five specific research questions: 1) What is the frequency and nature of opportunities for youth to engage in each of the five aspects of work with data in summer STEM programs? 2) What profiles of engagement emerge from data collected via ESM in the programs? 3) What are sources of variability for the profiles of engagement? 4) How do the five aspects of work with data relate to profiles of engagement? 5) How do youth characteristics relate to profiles of engagement?
+Findings show that aspects of work with data were fairly common overall, but that work with data was enacted out in varying ways, including some that were possibly highly engaging. Six profiles of youth engagement were identified, representing distinct configurations of the five indicators of engagement. Substantial variability in the profiles was present at the youth level, with less explained by the program youth were in or the nature of the particular instructional episode present at the times when youth were signaled. Relations between the profiles of engagement and each of the aspects of work with data were somewhat small: Notable exceptions were the generating data and data modeling were significantly associated with full engagement. Youth with higher pre-program interest in STEM were more likely to be engaged and competent but not challenged, though other youth characteristics were not highly related to the profiles.
+I discuss key findings as regards work with data in summer STEM programs and other informal learning environments, the nature of youths' engagement, and what factors can predict engagement. The design and goals of summer STEM programs, which are not (necessarily) focused on activities related to work with data, as well as other limitations including the measures for work with data used and the analytic approach, are identified and described. The role of generating data and modeling data as well as attention to the specifics of how work with data are enacted are presented as implications for practice. I highlight aspects of the findings and the implications for practice with respect to work with data in general and to engagement in informal learning environments, such as summer STEM programs, in both cases with an emphasis on how work with data can serve as a promising context for learning in STEM subject areas.
+\end{abstract}
+
+% Force a newpage
+\clearpage
+% Make the copyright page. The Graduate School ridiculously prohibits you
+% from having a copyright page unless you pay ProQuest to register the copyright.
+% This should be illegal, but I didn't make up the rule.
+
+\makecopyrightpage
+
+% If you have a dedication page, uncomment the next command to print the dedication page
+%
+\makededicationpage
+%
+\clearpage
+
+% Your Acknowledgements are formatted like a chapter, but with no number
+\chapter*{Acknowledgements}
+\DoubleSpacing % Acknowledgements should be double spaced
+I would like to acknowledge Matthew Koehler and Jennifer Schmidt. I am fortunate to have learned how to become a scholar through Matt, who has been my advisor since I entered my Ph.D. program. I could not ask for a better advisor. Thanks, Matt! Matt and Jen provided support for me to pursue the study reported in this dissertation. They gracefully and skillfully co-directed my dissertation, and I am grateful for that. I am also grateful to Jen for  not only as a co-director of my dissertation but also for being a mentor and a trusted source of advice related to my development as a scholar, especially during the process of my academic job search. Thank you, Jen!
+
+I would also like to acknowledge Lisa Linnenbrink-Garcia and Christina Schwarz as members of my dissertation committee. In addition to serving as committee members, I am grateful for the opportunity to develop as a scholar through working and learning from both. Thank you to my mentors and peers in the Educational Psychology and Educational Technology program at MSU. Thank you to collaborators Lee Shumow and Neil Naftzger for their work on the STEM Interest and Engagement project (National Science Foundation DRL-1421198), of which this project is a secondary analysis. Thank you to participating youth activity leaders and youth.
+
+Please note that this material is based upon work supported by the National Science Foundation under Grant No. DRL-1421198. Any opinions, findings, conclusions, or recommendations expressed in this material are those of the authors and do not reflect the views of the National Science Foundation.
+
+Understanding Work With Data in Summer STEM Programs Through An Experience Sampling Method Approach is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+\clearpage
+
+% We need to turn single spacing back on for the contents/figures/tables lists
+\SingleSpacing
+\tableofcontents* % table of contents will not be listed in the TOC
+\clearpage
+\listoftables % comment this out if you have no tables
+\clearpage
+\listoffigures % comment this out if you have no figures
+\mainmatter
+% If you have a list of abbreviations/symbols it would go here preceded by a \clearpage
+% See the class documentation and the Memoir manual for how to create other lists
+%
+
+\chapter{Introduction}\label{intro}
+
+\DoubleSpacing

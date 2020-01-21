@@ -1,12 +1,7 @@
 .Rproj.user
 .Rhistory
 .RData
-.Ruserdata
-
-*.toc
-*.out
-*.lot
-*.lof
-*.aux
-*.log
-*.lol
+_publish.R
+_book
+_bookdown_files
+rsconnect
