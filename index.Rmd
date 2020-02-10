@@ -1,5 +1,5 @@
 --- 
-title: "Dissertation"
+title: "Spatial patterning of lake nutrients and morphometry at macroscales relative to local-regional processes and aquatic-terrestrial linkages"
 author: "Joseph Stachelek"
 date: "2020"
 site: bookdown::bookdown_site
