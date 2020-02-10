@@ -5,3 +5,10 @@ _publish.R
 _book
 _bookdown_files
 rsconnect
+*.log
+*.lot
+*.lol
+*.lof
+*.aux
+*.out
+*.toc
