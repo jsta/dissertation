@@ -1,11 +1,14 @@
-all: dissertation.pdf
+all: docs/stachelek-dissertation.pdf
 
-dissertation.pdf: index.Rmd
+docs/stachelek-dissertation.pdf: index.Rmd
 	Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::pdf_book', output_dir = "")"
 	Rscript scripts/fix-tex.R
 	cd _bookdown_files && pdflatex stachelek-dissertation_mod.tex
 	cd _bookdown_files && bibtex stachelek-dissertation_mod
 	cd _bookdown_files && pdflatex stachelek-dissertation_mod.tex
+
+docs/index.html: index.Rmd
+	Rscript -e "bookdown::render_book('index.Rmd')"
 
 msu-thesis.cls:
 	wget http://mirrors.ctan.org/install/macros/latex/contrib/msu-thesis.tds.zip
