@@ -1,7 +1,8 @@
 all: stachelek-dissertation.pdf
 
 stachelek-dissertation.pdf: index.Rmd \
-correct-front-matter.tex
+correct-front-matter.tex \
+01-connectivity.Rmd
 	Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::pdf_book', output_dir = "")"
 	Rscript scripts/fix-tex.R
 	cd _bookdown_files && pdflatex stachelek-dissertation_mod.tex

@@ -1,7 +1,7 @@
 # preparing preamble
 f_orig <- readLines("docs/stachelek-dissertation.tex")
 
-start_good_content <- grep("label\\{intro-placemarker", f_orig) + 1
+start_good_content <- grep("label\\{ch1-placemarker", f_orig) + 1
 end <- length(f_orig)
 
 f_good <- f_orig[start_good_content:end]

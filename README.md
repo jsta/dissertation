@@ -9,7 +9,7 @@
 
 ## Editing
 
-* The title page through the preface is set in [correct-front-matter.tex](correct-front-matter.tex)
+* The title page, abstract, preface, and introduction source is set in [correct-front-matter.tex](correct-front-matter.tex)
 
 ### Formatting Tips
 
