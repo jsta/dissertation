@@ -7,7 +7,11 @@
 ### bookdown
 `$ make docs/index.html`
 
-## Formatting Tips
+## Editing
+
+* The title page through the preface is set in [correct-front-matter.tex](correct-front-matter.tex)
+
+### Formatting Tips
 
 You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
 
@@ -36,3 +40,5 @@ https://github.com/jrosen48/dissertation
 https://ctan.org/pkg/msu-thesis?lang=en
 
 https://twitter.com/JillDeines/status/991725606311116800
+
+https://grad.msu.edu/etd/formatting-guide
