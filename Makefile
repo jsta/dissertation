@@ -1,5 +1,6 @@
 all: stachelek-dissertation.pdf
 
+# msu-thesis.cls
 stachelek-dissertation.pdf: index.Rmd \
 correct-front-matter.tex \
 01-connectivity.Rmd
