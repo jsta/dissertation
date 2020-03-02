@@ -12,8 +12,11 @@ correct-front-matter.tex \
 	mv _bookdown_files/stachelek-dissertation_mod.pdf stachelek-dissertation.pdf
 	rm docs/stachelek-dissertation.pdf docs/stachelek-dissertation.tex
 
-stachelek-dissertation.docx: stachelek-dissertation.pdf
-	cd _bookdown_files && pandoc stachelek-dissertation_mod.tex --reference-doc=rosenberg-template.docx -s -o stachelek-dissertation_mod.docx
+stachelek-dissertation.docx: stachelek-dissertation.pdf \
+_bookdown_files/stachelek-template.docx
+	cd _bookdown_files && pandoc stachelek-dissertation_mod.tex \
+	--reference-doc=stachelek-template.docx --bibliography=pinp.bib \
+	--default-image-extension=.png -s -o stachelek-dissertation_mod.docx
 	mv _bookdown_files/stachelek-dissertation_mod.docx stachelek-dissertation.docx
 
 # rmarkdown::render_site(output_format = 'bookdown::word_document2', encoding = 'UTF-8')
