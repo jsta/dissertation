@@ -13,3 +13,4 @@ rsconnect
 *.out
 *.toc
 docs
+figures/*.png
