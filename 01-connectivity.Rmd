@@ -55,10 +55,10 @@ We used data on P retention, maximum depth, and water residence time from 129 la
 
 \begin{table}
   \centering
-  \begin{tabular}{l|l|l|l|l}
-\hline
+  \begin{tabular}{l l l l l}
+\toprule
  & Min & Median & Max & IQR\\
-\hline
+\midrule
 Total Phosphorus (ug/L) & 4 & 43 & 1380 & 20    - 111\\
 Chlorophyll (ug/L) & 1 & 12 & 381 & 6     - 21\\
 Secchi Depth (m) & 0.2 & 1.5 & 19.3 & 0.9   - 2.4\\
@@ -70,7 +70,7 @@ Maximum Depth (m) & 1.1 & 12.9 & 96.3 & 9.2   - 21.3\\
 Agricultural Landuse (\%) & 0.11 & 53.27 & 94.74 & 17.68 - 74.05\\
 Lake Subwatershed Area (${km\textasciicircum{}2}$) & 5 & 88 & 4018 & 21    - 410\\
 Lake Watershed Area (${km\textasciicircum{}2}$) & 120 & 143 & 18641 & 54    - 550\\
-\hline
+\bottomrule
 \end{tabular}
   \caption{Minimum, median, maximum, and interquartile range of selected characteristics of the study lakes (N = 129).} \label{table1}
 \end{table}
@@ -114,3 +114,114 @@ We fit all models in a Bayesian framework using the non-linear extension to the 
 ### Lake connectivity classes
 
 Our lake connectivity classes were formed by dividing the lake dataset into two classes for each connectivity metric based on the bivariate relationship between each metric and P retention. Prior studies have used a similar binary splitting approach to examine the effect of various exogenous factors on lake P retention \citep{cheng2010, shimodaIntegratingHierarchicalBayes2015}. We determined splitting criteria for each metric from the results of a random forest procedure incorporating conditional inference trees \citep{hothorn2015partykit}. This procedure creates binary splits of the independent variables (i.e. each of the connectivity metrics), which are recursively repeated to find the split that maximizes association with the dependent variable (P retention). The advantage of the ctree technique over the more typical classification-regression tree (CART) technique is that tree growth stopping rules are pre-specified \citep{hothorn2006unbiased}. As a result, some of subjectivity associated with post-hoc tree pruning is avoided.
+
+## Results
+
+### Interactions between connectivity, hydrology, and P loading
+
+We examined the bivariate relationships between connectivity, water residence time, P loading and other factors related to P retention to determine the potential for strong relationships among any of the variables which were not accounted for by our model structure (Eq 2, Figure \ref{fig4}). We found evidence for some relationships among these variables, but none that suggest either redundancy among connectivity metrics or that otherwise limit our ability to infer relationships with P retention (Figure \ref{fig4}). For example, the Pearson correlation (r) between water residence time and stream density, which is implicitly accounted for in our model structure, was 0.29 (p < 0.05). In contrast, the correlation between water residence time and upstream lake area, which is unaccounted for in our model structure, was only 0.10 (p > 0.05). Note that interactions between connectivity metrics and water residence time are accounted for in our hierarchical model structure because Eq. 2 uses a global coefficient $x$ for water residence time that is estimated separately from the hierarchical and connectivity-dependent P decay coefficient k. This is conceptually similar to fitting the k-connectivity-P retention relationship to the residuals of the water residence time to P retention relationship. Perhaps surprisingly, we did not observe strong correlations between P loading and water residence time (r = 0.13, p > 0.05) or between lake depth and most connectivity metrics (r < 0.17). This suggests that our P retention results are not confounded by variations in lake depth, by interactions between connectivity and P loading, or by interactions between water residence time and P loading.
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.85\textwidth,keepaspectratio]{figures/07_cor_mat_hmap-1}
+  \end{center}
+  \caption{Correlation among connectivity metrics and selected lake characteristics. Cell shading and color reflects the correlation coefficient value. Only coefficients accompanied by a significant p value < 0.05 are shown as text. Here, WS is the lake watershed extent whereas SWS is the lake subwatershed extent. Connectivity metrics are defined in Figure \ref{fig2}.}\label{fig4}
+\end{figure}
+
+A secondary purpose of examining the bivariate relationships between connectivity, water residence time, P loading and other factors related to P retention was to determine if our connectivity metrics were related to each other such that they provide similar information. With the exception of stream density and baseflow (r = -0.52, p < 0.05), correlations among connectivity metrics were low and of a similar magnitude as the correlations between connectivity metrics and water residence time (0.10 < r < 0.29). The strongest correlation between any connectivity metric or lake characteristic was upstream lake area and lake watershed area (r = 0.77, p < 0.05).
+
+We observed notably strong correlations between P loading and several lake characteristics not accounted for in Eq 2. These include the correlation between P loading and lake watershed area (r = 0.62, p < 0.05) as well as the correlation between P loading and lake subwatershed area (r = 0.76, p < 0.05). In addition, the correlation between P loading and upstream lake area was quite strong (r = 0.52, p < 0.05). Despite strong correlations between P loading, watershed area, and upstream lake area, we did not observe a strong correlation between P loading and P retention (r = 0.15, p > 0.05). Notably, this correlation was much weaker than the correlation between water residence time and P retention (r = 0.44, p > 0.05). Our observation that the correlation between P retention and P loading was not appreciably stronger than correlations between P retention and our connectivity metrics suggests that our estimates of connectivity metric effects on P retention are not confounded by interactions between water residence time and P loading.
+
+Although we did not observe strong correlations among connectivity metrics, we found that lakes with similar connectivity metric values, were spatially clustered (Figure \ref{fig5}). In particular, we found that lakes were concentrated in either the southern or northern portions of our study area depending on their connectivity metric value (Figure \ref{fig5}). This observation is consistent with the findings of \citet{fergusFreshwaterLandscapeLake2017} that lakes in the northern portion of our study area have distinct freshwater connectivity as compared to lakes in the southern portion of our study area.
+
+\begin{figure*}
+  \begin{center}
+    \includegraphics[width=0.8\textwidth,keepaspectratio]{figures/08_maps-1}
+  \end{center}
+  \caption{Locations of lakes of with different connectivity metric values at the (A) lake subwatershed and (B) lake watershed extent. Low valued lakes are represented by lighter (green) symbols, and high values lakes are represented by darker (purple) symbols. WS is the lake watershed extent. SWS is the lake subwatershed extent. Connectivity metrics are defined in Figure \ref{fig2}.}\label{fig5}
+\end{figure*}
+
+### Effects of connectivity on P retention
+
+We found that freshwater connectivity metrics were associated with lake P retention (Figure \ref{fig6}, \ref{fig7}). Across all connectivity metrics except stream order ratio, we found that the P decay coefficient $k$ and thus P retention was associated with whether a lake had a high or low value of each connectivity metric. These findings matched our expectations in several ways. Most notably, lakes with shorter average link lengths had higher P retention relative to lakes with longer average link lengths. In addition, lakes with less upstream lake area had higher P retention than lakes with more upstream lake area (Figure \ref{fig6}, \ref{fig7}).
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.85\textwidth,keepaspectratio]{figures/04_global_vollenweider-1}
+  \end{center}
+  \caption{Residence time (yr) versus P retention for the NES dataset and the global model fit to the data ($R^{2}$ = 0.34, n = 129) where the solid line and shaded interval represents the median and central 95\% interval estimates respectively (A). As above except that solid lines and shaded interval estimates represent hierarchical model fits to the data ($R^{2}$ = 0.41, n = 129) based on watershed average link length, which had the strongest association of any connectivity metric relative to P retention (B). Equations for these lines at median water residence time for low and high link length lakes are: Rp = 1 - (1 / (1 + 1.32 $\protect\tau^{0.4}$)) and Rp = 1 - (1 / (1 + 1.08 $\protect\tau^{0.4}$)) respectively.}\label{fig6}
+\end{figure}
+
+\begin{figure*}
+  \begin{center}
+    \includegraphics[width=0.95\textwidth,keepaspectratio]{figures/06_k-3}
+  \end{center}
+  \caption{Distribution of the $k$ parameter from Eq. 1 in lakes of differing connectivity, depth, or baseflow at the (A) lake subwatershed and (B) lake watershed extents. Lighter (green) lines indicate lakes with lower connectivity metrics values while darker (purple) lines indicate lakes with higher connectivity metrics values. For lake connection, lighter colored lines indicate lakes without upstream lakes. Connectivity metrics are defined in Figure 2. Labels associated with models where differences in $k$ translated to significant differences in P retention are bolded and starred.}\label{fig7}
+\end{figure*}
+
+We found that some connectivity metrics were more strongly related to P retention than others. For example, the model $R^{2}$ for network average link length was higher ($R^{2}$ = 0.41) than the global model ($R^{2}$ = 0.34). For other connectivity metrics, such as network stream order ratio, goodness-of-fit ($R^{2}$ = 0.36) was very similar to the global model ($R^{2}$ = 0.34). Model fit for other connectivity metrics was in between these two extremes (0. 36 < $R^{2}$ < 0.41). Overall, we found that all hierarchical models had at least a marginally better fit to the water residence time versus P retention relationship than a global model which does not account for connectivity (Figure \ref{fig6}). Although we found a discernable effect of connectivity metrics on lake P retention, the somewhat modest improvements in model fit may be due to the fact that water residence time remains a dominant effect even after accounting for freshwater connectivity.
+
+### Comparison across connectivity metrics and spatial extent
+
+Differences in P retention among lakes with different connectivity metric values was reflected in differences among connectivity class-specific values of the P decay parameter $k$ (Figure \ref{fig7}). The connectivity metric that had the most effect on $k$ was average link length (Table \ref{table2}). For instance, hierarchical models fit with the average link length metric had a median effect size of 0.23 and 0.05 for $k$ and P retention respectively (Table \ref{table2}), which means that for this metric, lakes with shorter average link lengths retained 4.7 to 4.9\% more P than lakes with longer average link lengths. The influence of lake-stream-based connectivity metrics on lake P retention was similar to stream-based connectivity metrics (Figure \ref{fig7}). This suggests that both lake-stream-based connectivity between lakes and streams as well as stream-based connectivity of lakes and their terrestrial watersheds influence P retention (Figure \ref{fig2}).
+
+\begin{table}
+\centering
+\begin{tabular}{lllcccc}
+\toprule
+\multicolumn{5}{c}{ } & \multicolumn{1}{c}{Low} & \multicolumn{1}{c}{High} \\
+\cmidrule(l{3pt}r{3pt}){6-6} \cmidrule(l{3pt}r{3pt}){7-7}
+Metric & Units & Scale & Delta k & Split Value & N & N\\
+\midrule
+Average link length & m & WS & 0.23* & 2380 & 33 & 96\\
+Closest lake distance & m & WS & 0.22* & 3774 & 26 & 103\\
+Stream density & - & WS & 0.2* & 13.84 & 95 & 34\\
+Lake connection & - & focal & 0.17* & - & 27 & 102\\
+Upstream lake area & ha & WS & 0.16* & 154 & 62 & 67\\
+\addlinespace
+Max depth & m & focal & 0.15* & 19.81 & 87 & 42\\
+Average link length & m & SWS & 0.14* & 2177 & 36 & 93\\
+Upstream lake area & ha & SWS & 0.13* & 279 & 69 & 60\\
+Baseflow & - & SWS & 0.12* & 63.76 & 113 & 16\\
+Stream order ratio & - & SWS & 0.1* & 0.67 & 87 & 42\\
+\addlinespace
+Baseflow & - & WS & 0.08* & 53.43 & 65 & 64\\
+Closest lake distance & m & SWS & 0.05 & 3274 & 16 & 113\\
+Stream order ratio & - & WS & 0.04 & 0.4 & 17 & 112\\
+Stream density & - & SWS & 0.03 & 4.43 & 24 & 105\\
+\bottomrule
+\end{tabular}
+\caption{Connectivity class split values and samples sizes for connectivity metrics and lake depth ranked according to the difference in median $k$ (P decay parameter, $\Delta$k) values. Differences in $\Delta$k that translate to differences in P retention greater than measurement precision are marked with an asterisk. Here, WS is the lake watershed extent whereas SWS is the lake subwatershed extent. Lakes with metric values above or equal to the split value were assigned to a separate connectivity class relative to lakes below the split value. N is sample size. Connectivity metrics are defined in Figure \ref{fig2}.} \label{table2}
+\end{table}
+
+We found that connectivity metrics measured at the lake watershed extent were more strongly associated with P retention than metrics measured at the lake subwatershed extent (Table \ref{table2}, Figure \ref{fig7}). Specifically, the metrics that had the strongest association with P retention such as average link length ($\Delta$k = 0.23), closest lake distance ($\Delta$k = 0.22), and stream density ($\Delta$k = 0.20) also had a stronger association at the lake watershed extent rather than at the lake subwatershed extent (Table \ref{table2}, Figure \ref{fig7}). An exception to this pattern was observed with the baseflow connectivity metric where although greater differences at the lake subwatershed extent were more strongly associated with P retention, the sign of the effect was variable depending on measurement extent (i.e. the value of the P decay parameter was positively related to connectivity metric values at the subwatershed extent but was negatively related at the watershed extent). For several connectivity metrics, we judged that differences in P decay among lakes with either low or high connectivity metric values were not significant because they translated to differences in P retention that were less than measurement precision (Table \ref{table2}).
+
+## Discussion
+
+Although prior studies have found that lake P retention is related to water residence time \citep{brett2008, cheng2010, vollenweiderInputoutputModels1975}, there is substantial variation around this relationship, particularly at intermediate water residence times. We found that some of this remaining variation could be explained using a hierarchical modelling framework that accounts for differences in freshwater connectivity among lakes. Although we found that the magnitude of this effect depends on the specific connectivity metric, our results are consistent with the findings of previous studies showing that connectivity metrics are associated with differences in lake carbon input fluxes and differences in lake nitrogen output fluxes \citep{cardilleCarbonWaterCycling2007, schmadelThresholdsLakeReservoir2018}. We also found important differences in the association between connectivity metrics and P retention at different measurement extents. Specifically, we found that P retention was more strongly associated with connectivity measured at the broader lake watershed extent rather than connectivity measured at the finer lake subwatershed extent.
+
+### Connectivity and P retention
+
+We found that differences in P retention among lake connectivity classes was influenced by specific connectivity metrics including average link length, closest lake distance, and stream density (Table \ref{table2}, Figure \ref{fig7}). Indeed, these metrics were more strongly associated with P retention than covariates typically used in statistical P retention models (e.g. lake depth, Figure \ref{fig1}). Note that we were able to examine the influence of specific metrics as separate effects apart from water residence time because our model structure treats them as hierarchical coefficients on the P decay parameter $k$. As a result, although water residence time remains the dominant effect on lake P retention, we were able to estimate the specific influence of each metric in a way that is not possible using integrated water residence time and connectivity metrics such as watershed transport capacity \citep{fraterrigoInfluenceLandUse2008}.
+
+Several of the connectivity metrics that were most strongly associated with P retention were weakly correlated with watershed size (Figure \ref{fig4}). The weak nature of these correlations are consistent with the mixed results of prior studies linking watershed size to lake processes. For example, \citet{zimmerLateralVerticalLongitudinal2018} found that carbon export was related to watershed size, but \citet{smithEutrophicationFreshwaterCoastal2003} found that the nitrogen flux was not strongly related to watershed size. Taken together, our results and the results of prior studies suggest that watershed size and lake depth alone may not always reflect functional differences in potential material transport. One consequence of a correlation between connectivity metrics and watershed size is that metrics derived from watershed size, such as catchment to lake area ratio, are also likely to be associated with connectivity. Catchment to lake area ratio in particular has been previously used as an approximation or proxy of water residence time \citep{rasmussenHumicContentLake1989, sobekPatternsRegulationDissolved2007}. Although our results differ from those of \citet{soranno2015} who found that the presence of an upstream lake connection was not strongly associated with catchment to lake area ratio, our results suggest that catchment to lake area ratio likely incorporates some connectivity information and caution is needed before using it as a proxy for water residence time.
+
+Another lake characteristic that was strongly related to watershed size was P loading. In particular, positive correlations between P loading and watershed size are consistent with the idea that lakes in larger watersheds receive greater P loading \citep{tprairieEffectCatchmentSize1986}. A related observation is that the correlation between P loading and upstream lake area was positive. This can be explained by the fact that larger watersheds often have greater numbers of lakes nested within them \citep{zhangEvaluatingEffectsUpstream2012}. Another notable result is that we observed a weaker correlation between P loading and watershed area relative to the correlation between P loading and subwatershed area. One explanation for this result is that land-use cover at the finer lake subwatershed extent has more of an influence on P loading than land-use cover at the broader lake watershed extent \citep{soranno2015}.
+
+### Relative importance of connectivity spatial extent
+
+One of the challenges in quantifying the effect of freshwater connectivity on lake P retention is that it is not always known what spatial extent of the watershed is functionally connected to a lake. We found that connectivity at the broader lake watershed extent rather than connectivity at the finer lake subwatershed extent was more strongly associated with differences in lake P retention. In addition, we found that individual characteristics such as lake depth (or more discrete measures of connectivity such as the presence of an upstream lake) were more strongly associated with P retention than any of the other connectivity metrics measured at the lake subwatershed extent (Table \ref{table2}). These findings contrast with \citet{soranno2015} who examined the association between lake nutrient concentrations (as opposed to retention) and land-use measured at varying spatial extents and found that measurements at the finer lake subwatershed extent rather than measurements at the broader lake watershed extent were more strongly associated with lake nutrient concentrations. One explanation for the difference between our results and those of \citet{soranno2015} is that connectivity metrics may reflect long-range watershed processes to a greater degree than land-use cover. An alternative explanation is that controls of lake P retention may differ compared to controls on lake P concentration.
+
+### How connectivity metrics may influence P retention
+
+Prior studies at regional extents have shown that P retention in streams and rivers is largely determined by the fate of the particulate load fraction \citep{cushingTransportDynamicsFine1993, kronvang1992, russell1998, vanni2001}. For instance, the findings of \citet{jarvie2011} show that riverine P loads can be controlled by nonpoint-source P delivery of particulate P. Therefore, it stands to reason that P retention in lakes may also be largely determined by the fate of the particulate load fraction. However, in the context of our broad-scale study it is difficult to examine this relationship because although we have estimates of nonpoint versus point source loading we do not have explicit estimates of particulate load fraction for large numbers of lakes. Unfortunately, we cannot use nonpoint source loading as a direct proxy for particulate load fraction because the two quantities do not have a consistent relationship. For example, \citet{russell1998} report that the particulate phosphorus fraction of nonpoint source loads can be anywhere between 62 - 90\% while \citet{djodjicSingleFieldsRiver2018} report that this fraction can be anywhere between 33 and 80\%. This may explain why prior broad scale studies that estimate lake P retention have not attempted to estimate separate effects of particulate versus dissolved loading \citep{alexander2008, brett2008}.
+
+We developed a conceptual model that places particulate load fraction in context with other processes affecting P retention (Figure \ref{fig1}). We expected that both land-stream and stream-lake connectivity influences how much particulate P is transported into lakes, which in turn affects their P retention. This expectation is supported by the findings of \citet{cushingTransportDynamicsFine1993} as well as \citet{guy1994} showing that particulate P can be transported beyond the direct drainage from stream-adjacent hillslopes.
+
+Despite our inability to test such differential transport processes across many lake watersheds at broad scales, we note that such processes are indirectly supported by our finding that connectivity metrics are associated with lake P retention. For example, differential transport of particulate matter whereby barriers to flux and differences in drainage path configuration only become apparent beyond fine spatial extents may explain why we observed stronger association of P retention with metrics measured at the broader lake watershed extent rather than metrics measured at the finer scale lake subwatershed extent. Another finding consistent with differential transport of particulate P is our observation that average link length, which approximates stream network structure and along-stream transport potential \citep{labarberaFractalDimensionStream1989}, was one of the more strongly associated metrics with lake P retention. Finally, it is notable that our stream density metric was influential at the lake watershed extent but not at the lake subwatershed extent. Given that the stream density metric captures the average distance or drainage potential between any streams in the network and their adjacent hillslopes, floodplains, and wetlands \citep[see ][]{leibowitzConnectivityStreamsWetlands2018}, this suggests that differences in terrestrial runoff of particulate matter from hillslope and riparian areas are likely to be important for P retention.
+
+Taken together, our findings are consistent with the idea that both connectivity between lakes and streams as well as connectivity of lakes and their terrestrial watersheds affect lake P retention. This conclusion matches that of prior studies showing that aquatic transport of phosphorus and nitrogen at the sub-continental scale is strongly controlled by processes affecting along-stream flux such as reservoir trapping \citep{alexander2008, schmadelThresholdsLakeReservoir2018}.
+
+## Conclusion
+
+We provide evidence that freshwater connectivity has an effect on lake P retention and that connectivity metrics measured at the broader lake watershed extent more strongly captures functional differences in the effect of connectivity on P retention among lakes compared to connectivity metrics measured at the finer lake subwatershed extents. Furthermore, our results suggest that lake P retention is related to both connectivity of lakes and streams as well as connectivity of lakes and their terrestrial watersheds. Taken together, our findings suggest that a broader network perspective would be useful for the design of regulatory frameworks and the development of best management practices focused on eutrophication, given the importance of lake P retention in determining the trophic state of lakes. Specifically, our findings highlight the need to consider cumulative network effects of P transport in addition to localized transport mechanisms.
