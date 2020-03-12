@@ -86,6 +86,13 @@
 %  \postdate{\par}
 %  \date{2017-11-24}
 %
+\usepackage{bibentry}
+\nobibliography*
+\newcommand\hangbibentry[1]{%
+    \smallskip\par\hangpara{1em}{1}\bibentry{#1}\smallskip\par %{indent}{afterline}
+}
+
+
 
 \frontmatter
 %\pagenumbering{Roman}
@@ -249,16 +256,23 @@ Taken together, my research points to the importance of hydrology in determining
 % Your Acknowledgments are formatted like a chapter, but with no number
 \chapter*{Acknowledgments}
 \DoubleSpacing % Acknowledgements should be double spaced
-This is an acknowledgements page...
+I'd like to thank these people who made this Dissertation possible:
+
+Pat
+DLLimno
+
+Contlimno
+CNH
+
+Sheena
+
 \clearpage
 
 \chapter*{Preface}
 \DoubleSpacing
 The chapters in this dissertation have been written as standalone papers with the following citations:\\
 
-\begin{hangparas}{0.25in}{1}
-Stachelek, J., Soranno, P.A. 2019. Does freshwater connectivity influence phosphorus retention in lakes? Limnology and Oceanography, 64(4), 1586-1599.10.1002/lno.11137.
-\end{hangparas}
+\hangbibentry{stachelek_national_2018}
 
 \clearpage
 
