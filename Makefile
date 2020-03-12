@@ -2,6 +2,7 @@ all: stachelek-dissertation.pdf
 
 # msu-thesis.cls
 stachelek-dissertation.pdf: index.Rmd \
+dissertation.bib \
 correct-front-matter.tex \
 01-connectivity.Rmd
 	Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::pdf_book', output_dir = "")"
@@ -16,6 +17,7 @@ stachelek-dissertation.docx: stachelek-dissertation.pdf \
 _bookdown_files/stachelek-template.docx
 	cd _bookdown_files && pandoc stachelek-dissertation_mod.tex \
 	--reference-doc=stachelek-template.docx --bibliography=pinp.bib \
+	--bibliography=dissertation.bib \
 	--default-image-extension=.png -s -o stachelek-dissertation_mod.docx
 	mv _bookdown_files/stachelek-dissertation_mod.docx stachelek-dissertation.docx
 
