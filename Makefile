@@ -2,6 +2,7 @@ all: stachelek-dissertation.pdf
 
 # msu-thesis.cls
 stachelek-dissertation.pdf: _bookdown.yml _output.yml scripts/fix-tex.R \
+_bookdown_files/jsta.bst \
 index.Rmd \
 dissertation.bib \
 correct-front-matter.tex end-matter.tex \
