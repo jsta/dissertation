@@ -1,17 +1,20 @@
 all: stachelek-dissertation.pdf
 
 # msu-thesis.cls
-stachelek-dissertation.pdf: index.Rmd \
+stachelek-dissertation.pdf: _bookdown.yml _output.yml scripts/fix-tex.R \
+index.Rmd \
 dissertation.bib \
-correct-front-matter.tex \
-01-connectivity.Rmd
+correct-front-matter.tex end-matter.tex \
+01-connectivity.Rmd \
+02-ag.Rmd \
+03-bathymetry.Rmd
 	Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::pdf_book', output_dir = "")"
 	Rscript scripts/fix-tex.R
 	cd _bookdown_files && pdflatex stachelek-dissertation_mod.tex
 	cd _bookdown_files && bibtex stachelek-dissertation_mod
 	cd _bookdown_files && pdflatex stachelek-dissertation_mod.tex
 	mv _bookdown_files/stachelek-dissertation_mod.pdf stachelek-dissertation.pdf
-	rm docs/stachelek-dissertation.pdf docs/stachelek-dissertation.tex
+	rm docs/stachelek-dissertation.pdf
 
 stachelek-dissertation.docx: stachelek-dissertation.pdf \
 _bookdown_files/stachelek-template.docx
