@@ -929,6 +929,7 @@ FUNCTION {misc}
   format.url output
   new.block
   note output
+  format.doi output
   fin.entry
   empty.misc.check
 }
