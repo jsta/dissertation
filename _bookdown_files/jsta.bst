@@ -285,7 +285,7 @@ FUNCTION {format.issn}
 FUNCTION {format.url}
 { url empty$
     { "" }
-    { new.block "URL \url{" url * "}" * }
+    { new.block "\url{" url * "}" * }
   if$
 }
 
@@ -713,7 +713,6 @@ FUNCTION {article}
     }
   if$
   format.doi output
-  format.url output
   new.block
   note output
   fin.entry
@@ -750,9 +749,10 @@ FUNCTION {book}
   format.edition output
   format.isbn output
   format.doi output
-  format.url output
   new.block
   note output
+  format.url output
+  new.block
   fin.entry
 }
 
