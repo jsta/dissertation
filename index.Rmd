@@ -5,7 +5,7 @@ date: "2020"
 site: bookdown::bookdown_site
 output: bookdown::pdf_book
 documentclass: msu-thesis
-bibliography: [packages.bib, pinp.bib, dissertation.bib]
+bibliography: [pinp.bib, dissertation.bib]
 biblio-style: plainnat
 link-citations: yes
 github-repo: jsta/dissertation
