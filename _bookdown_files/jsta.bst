@@ -732,6 +732,7 @@ FUNCTION {book}
       if$
     }
   if$
+  format.date "year" output.check
   new.block
   format.btitle "title" output.check
   crossref missing$
@@ -747,7 +748,6 @@ FUNCTION {book}
     }
   if$
   format.edition output
-  format.date "year" output.check
   format.isbn output
   format.doi output
   format.url output
@@ -920,12 +920,12 @@ FUNCTION {mastersthesis}
 FUNCTION {misc}
 { output.bibitem
   format.authors output
+  format.date output
   author format.key output
   title howpublished new.block.checkb
   format.title output
   howpublished new.block.checka
   howpublished output
-  format.date output
   format.url output
   new.block
   note output
