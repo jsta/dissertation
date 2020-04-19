@@ -15,6 +15,10 @@
 
 * The title page, abstract, preface, and introduction source is set in [correct-front-matter.tex](correct-front-matter.tex)
 
+* Research frontiers source is set in [end-matter.tex](end-matter.tex)
+
+* bibtex files listed in [index.Rmd](index.Rmd), stored in the top level folder, **and** symlinked to the `_bookdown_files` directory
+
 ## Links
 
 https://grad.msu.edu/etd/formatting-guide
