@@ -227,6 +227,17 @@
 \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
 \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 
+\usepackage{newfloat,tocloft}
+\DeclareFloatingEnvironment[name={Figure},fileext=lsf,listname={List of Supplementary Figures}]{suppfigure}
+\DeclareCaptionLabelFormat{suppfigure}{#1 #2}
+\captionsetup[suppfigure]{labelfont=bf,labelformat=suppfigure,labelsep=period}
+\renewcommand{\thesuppfigure}{S\arabic{suppfigure}}
+
+\DeclareFloatingEnvironment[name={Table},fileext=lst,listname={List of Supplementary Tables}]{supptable}
+\DeclareCaptionLabelFormat{supptable}{#1 #2}
+\captionsetup[supptable]{labelfont=bf,labelformat=supptable,labelsep=period}
+\renewcommand{\thesupptable}{S\arabic{supptable}}
+
 \begin{document}
 %\maketitle
 
@@ -355,7 +366,10 @@ In addition to papers, I authored the following software packages:
 \clearpage
 \listoftables % comment this out if you have no tables
 \clearpage
+\listofsupptables
+\clearpage
 \listoffigures % comment this out if you have no figures
+\listofsuppfigures
 \mainmatter
 % If you have a list of abbreviations/symbols it would go here preceded by a \clearpage
 % See the class documentation and the Memoir manual for how to create other lists
