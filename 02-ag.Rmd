@@ -89,7 +89,7 @@ We evaluated the effects of agricultural activities on lake TN and TP concentrat
 \begin{aligned}
 y_i = N(\alpha_{j(i)} + \beta_1 &* X_{1i}...\beta_n * X_{ni} + \gamma_{1j(i)} * W_{1i} + \gamma_{mj{i}} * W_{mi})\\
 & \binom{\alpha_j}{\gamma_{1j}} \sim MVN\left( \binom{\mu_\alpha}{\mu_{\gamma1}}, \Sigma \right)
-\label{eqn1} 
+\label{eqn2.1} 
 \end{aligned}
 \end{equation}
 
@@ -147,7 +147,7 @@ types of predictors that contributed significantly to the top-ranked N and P mod
   \begin{center}
     \includegraphics[width=0.7\textwidth, height=3.5in,keepaspectratio]{figures/fe-1}
   \end{center}
-  \caption{Global (fixed effect) coefficient values ($\beta$, for all non-LULC predictors) and population level estimates for the effect of watershed land-use ($\mu_\gamma$, for LULC) on lake TN and TP for each respective top-ranked model. Note that the values for LULC here are identical to their corresponding values in Figure 2. Values shown are posterior medians (filled circles) and 95\% credible intervals (solid lines). Also shown is a comparison to a zero effect (solid vertical line). Values that do not overlap zero are shaded in red. Horizontal bars separate coefficients in distinct predictor categories. Coefficient estimates are reported relative to standardized predictor variables centered at zero with unit variance and correspond with $\beta$ (and $\mu_\gamma$ for LULC) from Equation 1.}\label{fig3}
+  \caption{Global (fixed effect) coefficient values ($\beta$, for all non-LULC predictors) and population level estimates for the effect of watershed land-use ($\mu_\gamma$, for LULC) on lake TN and TP for each respective top-ranked model. Note that the values for LULC here are identical to their corresponding values in Figure 2. Values shown are posterior medians (filled circles) and 95\% credible intervals (solid lines). Also shown is a comparison to a zero effect (solid vertical line). Values that do not overlap zero are shaded in red. Horizontal bars separate coefficients in distinct predictor categories. Coefficient estimates are reported relative to standardized predictor variables centered at zero with unit variance and correspond with $\beta$ (and $\mu_\gamma$ for LULC) from Equation \ref{eqn2.1}.}\label{fig3}
 \end{figure*}
 
 Although top-ranked N and P models shared some similarities in the type of predictors that contributed significantly to each model, the coefficients of these models differed in magnitude, and thus the top-ranked models varied in their sensitivity to specific predictors (Figure \ref{fig3}). For example, the top-ranked P model was more sensitive to lake characteristics, whereas the top-ranked N model was more sensitive to watershed land-use. Quantitatively, lake TP concentrations were more sensitive to maximum depth ($\beta_{depth}$: median = -0.39, SD = 0.04) compared to lake TN concentrations ($\beta_{depth}$: median = -0.14, SD = 0.04); whereas lake TN concentrations were more sensitive to watershed agriculture land-use ($\beta_{ag}$: median = 0.44, SD = 0.11) compared to lake TP concentrations ($\beta_{ag}$: median = 0.10, SD = 0.08). Finally, although we found that near-stream agriculture was associated with both higher TN and TP concentrations (i.e., a source-effect of near-stream agriculture), there was not a significant difference in the magnitude (i.e., sensitivity) of this coefficient between N ($\beta_{bufferag}$: median = 0.16, SD = 0.06) and P ($\beta_{bufferag}$: median = 0.12, SD = 0.06) models.
@@ -256,7 +256,7 @@ Wetlands & Woody wetlands\\
 Wetlands & Herbaceous wetlands\\
 \bottomrule
 \end{tabular}
-  \caption{Category definitions from the 2010 CDL. See code supplement for listing of variables classified as 'ag' (https://doi.org/10.5281/zenodo.3754916).} \label{tables2.1}
+  \caption{Category definitions from the 2010 CDL. See code supplement for listing of variables classified as 'ag' (\href{https://doi.org/10.5281/zenodo.3754916}{doi:10.5281/zenodo.3754916}).} \label{tables2.1}
 \end{supptable}
 
 \begin{suppfigure}[h]
@@ -270,14 +270,14 @@ Wetlands & Herbaceous wetlands\\
   \begin{center}
     \includegraphics[width=0.5\textwidth, height=3.5in,keepaspectratio]{figures/trophic_state-1}
   \end{center}
-  \caption{Lake trophic state in our study lakes versus all lakes from Soranno et al. (2017) located within our study extent. Trophic state based on the chlorophyll critera from Carlson (1996).}\label{figs2.3}
+  \caption{Lake trophic state in our study lakes versus all lakes from \citet{sorannoLAGOSNEMultiscaledGeospatial2017} located within our study extent. Trophic state based on the chlorophyll criteria from \citet{carlson1996coordinator}.}\label{figs2.3}
 \end{suppfigure}
 
 \begin{suppfigure}[h]
   \begin{center}
     \includegraphics[width=0.9\textwidth, height=3.5in,keepaspectratio]{figures/fe_nolulc-1}
   \end{center}
-  \caption{Global (fixed effect) coefficient values and credible intervals for top-ranked lake TP and TN models when land-use predictors are excluded. Values shown are posterior medians (filled circles) and 95\% credible intervals (solid lines). Also shown is a comparison to a zero effect (solid vertical line). Values that do not overlap zero are shaded in red. Horizontal bars separate coefficients in distinct predictor categories. Coefficient estimates are reported relative to standardized predictor variables centered at zero with unit variance and correspond with $\beta$ from Equation 1.}\label{figs2.4}
+  \caption{Global (fixed effect) coefficient values and credible intervals for top-ranked lake TP and TN models when land-use predictors are excluded. Values shown are posterior medians (filled circles) and 95\% credible intervals (solid lines). Also shown is a comparison to a zero effect (solid vertical line). Values that do not overlap zero are shaded in red. Horizontal bars separate coefficients in distinct predictor categories. Coefficient estimates are reported relative to standardized predictor variables centered at zero with unit variance and correspond with $\beta$ from Equation \ref{eqn2.1}.}\label{figs2.4}
 \end{suppfigure}
 
 \begin{suppfigure}[h]
@@ -298,5 +298,5 @@ Wetlands & Herbaceous wetlands\\
   \begin{center}
     \includegraphics[width=0.6\textwidth, height=3.5in,keepaspectratio]{figures/clay-nonlinear-1}
   \end{center}
-  \caption{Scatterplot showing the non-linear relationship between watershed clay content and lake TN concentration. Vertical dashed line shows transition between a positive and a negative correlation (r) between the two variables. Solid red line shows the fit of a generalized additive model from the mgcv R package.}\label{figs2.7}
+  \caption{Scatterplot showing the non-linear relationship between watershed clay content and lake TN concentration. Vertical dashed line shows transition between a positive and a negative correlation (r) between the two variables. Solid red line shows the fit of a generalized additive model from the \texttt{mgcv} R package.}\label{figs2.7}
 \end{suppfigure}
