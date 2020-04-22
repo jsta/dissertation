@@ -249,7 +249,7 @@ Our study lakes encompassed a range of land-use cover types and nutrient levels.
 
 \begin{suppfigure}[h]
   \begin{center}
-    \includegraphics[width=0.6\textwidth, height=3.5in,keepaspectratio]{figures/p-retention_vs_percent-ag-1}
+    \includegraphics[width=0.5\textwidth, height=3.5in,keepaspectratio]{figures/p-retention_vs_percent-ag-1}
   \end{center}
   \caption{P retention versus percent agriculture in lake watersheds.}\label{figs1.2}
 \end{suppfigure}
