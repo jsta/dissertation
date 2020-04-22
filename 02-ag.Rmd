@@ -291,7 +291,7 @@ Wetlands & Herbaceous wetlands\\
   \begin{center}
     \includegraphics[width=0.55\textwidth, height=3.5in,keepaspectratio]{figures/tile_drainage_vs_clay-1}
   \end{center}
-  \caption{Scatterplot showing the median clay content of watersheds in our hydrologic regions plotted against percent tile drainage from Nakagaki and Wieczorek (2016). The regions that are highly sensitive to agricultural land-use from Figure 4 are highlighted in red.}\label{figs2.6}
+  \caption{Scatterplot showing the median clay content of watersheds in our hydrologic regions plotted against percent tile drainage from \citet{nakagaki2016estimates}. The regions that are highly sensitive to agricultural land-use from Figure 4 are highlighted in red.}\label{figs2.6}
 \end{suppfigure}
 
 \begin{suppfigure}[h]
