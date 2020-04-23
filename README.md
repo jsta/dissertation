@@ -17,7 +17,7 @@
 
 * Research frontiers source is set in [end-matter.tex](end-matter.tex)
 
-* bibtex files listed in [index.Rmd](index.Rmd), stored in the top level folder, **and** symlinked to the `_bookdown_files` directory
+* Bibtex files are listed in [index.Rmd](index.Rmd), stored in the top level folder, **and** symlinked (or copied) to the `_bookdown_files` directory
 
 ## Links
 
