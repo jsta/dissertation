@@ -835,7 +835,6 @@ FUNCTION {incollection}
       format.chapter.pages output
     }
   if$
-  format.isbn output
   format.doi output
   format.url output
   new.block
