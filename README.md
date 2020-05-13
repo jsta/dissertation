@@ -1,5 +1,23 @@
 ## Spatial Patterning of Lake Nutrients and Morphometry at Macroscales: Importance of Regional Factors and Aquatic-Terrestrial Linkages
 
+## Timeline
+
+June 19 - Dissertation draft due to commitee
+
+August 19 - Approval deadline at Grad School
+
+## Prerequsites
+
+### R packages
+ 
+ * bookdown
+ 
+ * tinytex
+ 
+### LaTeX packages
+
+  * titling
+
 ## Building
 
 ### pdf
