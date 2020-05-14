@@ -1,4 +1,4 @@
-all: stachelek-dissertation.pdf
+all: stachelek-dissertation.pdf docs/index.html
 
 # msu-thesis.cls
 stachelek-dissertation.pdf: _bookdown.yml _output.yml scripts/fix-tex.R \
@@ -6,17 +6,18 @@ _bookdown_files/jsta.bst \
 index.Rmd \
 msu-thesis.cls \
 dissertation.bib \
-correct-front-matter.tex end-matter.tex \
+correct-front-matter.tex \
 01-connectivity.Rmd \
 02-ag.Rmd \
-03-bathymetry.Rmd
+03-bathymetry.Rmd \
+end.Rmd
 	Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::pdf_book', output_dir = "")"
 	Rscript scripts/fix-tex.R
 	cd _bookdown_files && pdflatex stachelek-dissertation_mod.tex
 	cd _bookdown_files && bibtex stachelek-dissertation_mod
 	cd _bookdown_files && pdflatex stachelek-dissertation_mod.tex
 	mv _bookdown_files/stachelek-dissertation_mod.pdf stachelek-dissertation.pdf
-	rm docs/stachelek-dissertation.pdf
+	cp stachelek-dissertation.pdf docs/stachelek-dissertation.pdf
 
 stachelek-dissertation.docx: stachelek-dissertation.pdf \
 _bookdown_files/stachelek-template.docx
@@ -27,7 +28,7 @@ _bookdown_files/stachelek-template.docx
 
 # rmarkdown::render_site(output_format = 'bookdown::word_document2', encoding = 'UTF-8')
 
-docs/index.html: index.Rmd
+docs/index.html: index.Rmd _output.yml stachelek-dissertation.pdf
 	Rscript -e "bookdown::render_book('index.Rmd')"
 
 # msu-thesis.cls:
