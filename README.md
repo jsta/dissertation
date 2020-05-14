@@ -39,6 +39,14 @@ See [Dockerfile](Dockerfile)
 
 * Bibtex files are listed in [index.Rmd](index.Rmd), stored in the top level folder, **and** symlinked (or copied) to the `_bookdown_files` directory
 
+## Reproducibility
+
+```
+docker pull jsta/dissertation:latest
+docker create --name dissertation3 jsta/dissertation
+docker cp dissertation3:~/stachelek-dissertation.pdf test.pdf
+```
+
 ## Links
 
 https://grad.msu.edu/etd/formatting-guide
