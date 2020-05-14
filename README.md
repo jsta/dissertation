@@ -16,7 +16,7 @@ August 19 - Approval deadline at Grad School
  
 ### LaTeX packages
 
-  * titling
+See [Dockerfile](Dockerfile)
 
 ## Building
 
@@ -31,11 +31,11 @@ August 19 - Approval deadline at Grad School
 
 ## Editing
 
-* The title page, abstract, preface, and introduction source is set in [correct-front-matter.tex](correct-front-matter.tex)
+* The title page, abstract, preface, and introduction source is set in [correct-front-matter.tex](correct-front-matter.tex) and relevant sections copied to [index.Rmd](index.Rmd)
 
 * Each individual chapter is a numbered Rmd file in the top level folder.
 
-* Research frontiers source is set in [end-matter.tex](end-matter.tex)
+* Research frontiers source is set in [end.Rmd](end.Rmd)
 
 * Bibtex files are listed in [index.Rmd](index.Rmd), stored in the top level folder, **and** symlinked (or copied) to the `_bookdown_files` directory
 
