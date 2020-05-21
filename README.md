@@ -43,6 +43,7 @@ See [Dockerfile](Dockerfile)
 
 ```
 docker pull jsta/dissertation:latest
+# docker build -t jsta/dissertation:latest .
 docker create --name dissertation3 jsta/dissertation
 docker cp dissertation3:~/stachelek-dissertation.pdf test.pdf
 ```
