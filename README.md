@@ -1,5 +1,9 @@
 ## Spatial Patterning of Lake Nutrients and Morphometry at Macroscales: Importance of Regional Factors and Aquatic-Terrestrial Linkages
 
+## Products
+
+pdf: [stachelek-dissertation.pdf](stachelek-dissertation.pdf)
+
 ## Timeline
 
 June 19 - Dissertation draft due to commitee
