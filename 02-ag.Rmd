@@ -146,7 +146,7 @@ types of predictors that contributed significantly to the top-ranked N and P mod
 \setcounter{figure}{2}
 \begin{figure*}
   \begin{center}
-    \includegraphics[width=0.7\textwidth, height=3.5in,keepaspectratio]{figures/fe-1}
+    \includegraphics[width=0.8\textwidth, height=3.5in,keepaspectratio]{figures/fe-1}
   \end{center}
   \caption{Global (fixed effect) coefficient values ($\beta$, for all non-LULC predictors) and population level estimates for the effect of watershed land-use ($\mu_\gamma$, for LULC) on lake TN and TP for each respective top-ranked model. Note that the values for LULC here are identical to their corresponding values in Figure 2. Values shown are posterior medians (filled circles) and 95\% credible intervals (solid lines). Also shown is a comparison to a zero effect (solid vertical line). Values that do not overlap zero are shaded in red. Horizontal bars separate coefficients in distinct predictor categories. Coefficient estimates are reported relative to standardized predictor variables centered at zero with unit variance and correspond with $\beta$ (and $\mu_\gamma$ for LULC) from Equation \ref{eqn2.1}.}\label{fig3}
 \end{figure*}
