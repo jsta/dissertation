@@ -20,14 +20,11 @@ See [Dockerfile](Dockerfile)
 
 ## Building
 
-### pdf
+### pdf + html
 `$ make all`
 
 ### docx
 `$ make stachelek-dissertation.docx`
-
-### bookdown
-`$ make docs/index.html`
 
 ## Editing
 
@@ -35,9 +32,11 @@ See [Dockerfile](Dockerfile)
 
 * Each individual chapter is a numbered Rmd file in the top level folder.
 
-* Research frontiers source is set in [end.Rmd](end.Rmd)
+* End matter is set in [end.Rmd](end.Rmd)
 
 * Bibtex files are listed in [index.Rmd](index.Rmd), stored in the top level folder, **and** symlinked (or copied) to the `_bookdown_files` directory
+
+* Formatting of figure and table captions for supplementary material is set in [preamble.tex](preamble.tex)
 
 ## Reproducibility
 
