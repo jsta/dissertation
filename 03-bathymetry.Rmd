@@ -1,5 +1,7 @@
 # Geometric models overestimate lake depth due to imperfect slope measurement
 
+\hangbibentry{stachelekGeometricModelsPredictInPrep}
+
 ## Abstract 
 \noindent
 Lake depth is a critical characteristic that influences many important

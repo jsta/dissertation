@@ -1,5 +1,7 @@
 # Granular measures of agricultural land-use influence lake nitrogen and phosphorus differently at macroscales
 
+\hangbibentry{stachelekGranularMeasuresAgricultural2020}
+
 ## Abstract 
 
 \noindent 

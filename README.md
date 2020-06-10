@@ -42,6 +42,8 @@ See [Dockerfile](Dockerfile)
 
 * Formatting of figure and table captions for supplementary material is set in [preamble.tex](preamble.tex)
 
+* Make LaTeX commands available to the initial Rmd conversion process by placing them in [preamble.tex](preamble.tex)
+
 ## Reproducibility
 
 ```

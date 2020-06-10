@@ -1,5 +1,7 @@
 # Does freshwater connectivity influence phosphorus retention in lakes? {#ch1-placemarker}
 
+\hangbibentry{stachelek_2019}
+
 ## Abstract
 
 \noindent

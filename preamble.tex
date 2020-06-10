@@ -10,3 +10,9 @@
 \DeclareCaptionLabelFormat{supptable}{#1 #2}
 \captionsetup[supptable]{labelfont=bf,labelformat=supptable,labelsep=period}
 % \renewcommand{\thesupptable}{S\arabic{supptable}}
+
+\usepackage{bibentry}
+\nobibliography*
+\newcommand\hangbibentry[1]{%
+    \smallskip\par\hangpara{1em}{1}\bibentry{#1}\smallskip\par %{indent}{afterline}
+}
