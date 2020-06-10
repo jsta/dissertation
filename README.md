@@ -6,7 +6,7 @@ pdf: [stachelek-dissertation.pdf](stachelek-dissertation.pdf)
 
 ## Timeline
 
-June 19 - Dissertation draft due to commitee
+June 18 - Dissertation draft due to commitee
 
 August 19 - Approval deadline at Grad School
 
