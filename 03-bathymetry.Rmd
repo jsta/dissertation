@@ -95,7 +95,7 @@ We categorized lakes based on their cross-section shape and reservoir class. For
   \end{tabular}
 \end{table}
 
-Covariates used in random forest modeling (Table \ref{table3.1}, Equation \ref{eq2}) for lake elevation, area, island area, perimeter, shoreline development, watershed to lake area ratio, and hydrologic subbasin (i.e. HUC4s), were obtained from the LAGOS-US LOCUS database (Smith et al. In Prep). Shoreline development is a measure of lake perimeter shape defined as:
+Covariates used in random forest modeling (Table \ref{table3.1}, Equation \ref{eq2}) for lake elevation, area, island area, perimeter, shoreline development, watershed to lake area ratio, and hydrologic subbasin (i.e. HUC4s), were obtained from the LAGOS-US LOCUS database \citep{smith2020}. Shoreline development is a measure of lake perimeter shape defined as:
 
 \begin{equation}
       shoreline_{devel} = perimeter / (2 * \sqrt{(\pi * waterarea * 10000)}) \label{eq2}
