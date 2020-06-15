@@ -148,7 +148,7 @@ types of predictors that contributed significantly to the top-ranked N and P mod
 \setcounter{figure}{2}
 \begin{figure*}
   \begin{center}
-    \includegraphics[width=0.8\textwidth, height=3.5in,keepaspectratio]{figures/fe-1}
+    \includegraphics[width=0.9\textwidth, height=3.7in,keepaspectratio]{figures/fe-1}
   \end{center}
   \caption{Global (fixed effect) coefficient values ($\beta$, for all non-LULC predictors) and population level estimates for the effect of watershed land-use ($\mu_\gamma$, for LULC) on lake TN and TP for each respective top-ranked model. Note that the values for LULC here are identical to their corresponding values in Figure 2. Values shown are posterior medians (filled circles) and 95\% credible intervals (solid lines). Also shown is a comparison to a zero effect (solid vertical line). Values that do not overlap zero are shaded in red. Horizontal bars separate coefficients in distinct predictor categories. Coefficient estimates are reported relative to standardized predictor variables centered at zero with unit variance and correspond with $\beta$ (and $\mu_\gamma$ for LULC) from Equation \ref{eqn2.1}.}\label{fig3}
 \end{figure*}
@@ -234,7 +234,7 @@ We show that granular measures of agricultural activity are related to both lake
 
 \begin{suppfigure}[h]
   \begin{center}
-    \includegraphics[width=0.7\textwidth, height=3.5in,keepaspectratio]{figures/cdl_vs_nlcd-1}
+    \includegraphics[width=0.85\textwidth, height=3.8in,keepaspectratio]{figures/cdl_vs_nlcd-1}
   \end{center}
   \caption{Example of increasing granularity for total Ag to Ag versus pasture, to pasture versus specific crops. For illustration, only corn, soybeans, and pasture are shown rather than all CDL land-use categories.}\label{figs2.1}
   \end{suppfigure}
@@ -294,7 +294,7 @@ Wetlands & Herbaceous wetlands\\
 
 \begin{suppfigure}[h]
   \begin{center}
-    \includegraphics[width=0.55\textwidth, height=3.5in,keepaspectratio]{figures/tile_drainage_vs_clay-1}
+    \includegraphics[width=0.45\textwidth, height=3in,keepaspectratio]{figures/tile_drainage_vs_clay-1}
   \end{center}
   \caption{Scatterplot showing the median clay content of watersheds in our hydrologic regions plotted against percent tile drainage from \citet{nakagaki2016estimates}. The regions that are highly sensitive to agricultural land-use from Figure 4 are highlighted in red.}\label{figs2.6}
 \end{suppfigure}

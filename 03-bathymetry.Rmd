@@ -182,7 +182,7 @@ In comparing among lake geometry measures, our analysis suggests that proxy dist
 
 One surprising finding with respect to the relationship between true and proxy geometry measures when examined by lake class was the fact that there was no greater difference between proxy and true distances in reservoirs compared to natural lakes. This is contrary to the idea that most reservoirs are drowned river valleys where the deepest point is close to the edge at the end of the reservoir (i.e. next to the dam) rather than in the center of the reservoir \citep{lanza1985interactions}. One possible explanation is that the reservoir classification data from \citet{polus2020} uses a more general definition of a reservoir (i.e. any permanent waterbody that has a water control structure likely to significantly impact flow or pool water) compared to that of conventional classifications that are tied to specific dam types or dam heights. Another possible explanation is that conventional reservoir classifications are conceptually biased towards more southern areas with few natural lakes (Figure S3.\ref{figs3.1}).
 
-We found other differences between convex and concave lakes. One finding was that convex lakes, when compared to concave lakes, had longer distances to lake centers relative to corresponding distances to the deepest point of lakes. In addition, convex lakes often had steeper in-lake slopes relative to nearshore land slopes as compared to concave lakes. These differences are reflected in the class-wise differences in shoreline development (e.g. shorelines were more sinuous in convex lakes compared to concave lakes, Figure S3.\ref{figs3.3}). It was notable that convex lakes were deeper than concave lakes despite having similar distributions of lake surface area (Figure S3.\ref{figs3.3}). Given the similarity in lake surface area, the underlying cause of these differences is unknown but one possibility is that geometry is tied to the circumstances of lake formation whereby concave lakes were formed as a result of more intense glacial scouring compared to convex lakes \citep{gorhamPhysicalLimnologyNorthern1958}. While there is some evidence in support of this idea, namely that there is a geographic hotspot of concave lakes associated with the glaciated “prairie pothole region” \cite<see>{hayashiSimpleEquationsRepresent2000}, the overall geographic distribution of lake cross-section shapes does not support this idea. Instead of a concentrated area of concave lakes in formerly glaciated regions, there appears to be a fairly even mix of concave and convex lakes distributed amongst the northern (i.e. glaciated) and southern (non-glaciated) portions of our study area (Figure S3.\ref{figs3.1}).
+We found other differences between convex and concave lakes. One finding was that convex lakes, when compared to concave lakes, had longer distances to lake centers relative to corresponding distances to the deepest point of lakes. In addition, convex lakes often had steeper in-lake slopes relative to nearshore land slopes as compared to concave lakes. These differences are reflected in the class-wise differences in shoreline development (e.g. shorelines were more sinuous in convex lakes compared to concave lakes, Figure S3.\ref{figs3.3}). It was notable that convex lakes were deeper than concave lakes despite having similar distributions of lake surface area (Figure S3.\ref{figs3.3}). Given the similarity in lake surface area, the underlying cause of these differences is unknown but one possibility is that geometry is tied to the circumstances of lake formation whereby concave lakes were formed as a result of more intense glacial scouring compared to convex lakes \citep{gorhamPhysicalLimnologyNorthern1958}. While there is some evidence in support of this idea, namely that there is a geographic hotspot of concave lakes associated with the glaciated “prairie pothole region” \citep[see][]{hayashiSimpleEquationsRepresent2000}, the overall geographic distribution of lake cross-section shapes does not support this idea. Instead of a concentrated area of concave lakes in formerly glaciated regions, there appears to be a fairly even mix of concave and convex lakes distributed amongst the northern (i.e. glaciated) and southern (non-glaciated) portions of our study area (Figure S3.\ref{figs3.1}).
 
 \subsection{Effects of proxy measures of lake geometry depth prediction error}
 \noindent
@@ -211,20 +211,26 @@ Finally, our findings indicate that geometry measures differ according to lake c
       \end{suppfigure}
 
 \begin{suppfigure}
+      \begin{center}
       \noindent\includegraphics[width=0.85\textwidth]{figures/lgnemanual-vs-bathy-depth-1}
       \caption{Comparison between reported depth and depth extracted from bathymetry surfaces by US State where reported depths come from the LAGOSUS-Depth product \citep{stachelek2020}. For this figure, no reported depth values originated from the same source as its corresponding bathymetry-derived value.}\label{figs3.2}
+      \end{center}
       \end{suppfigure}
 
 \clearpage
 \begin{suppfigure}
+\begin{center}
       \noindent\includegraphics[width=0.85\textwidth]{figures/01_contrasts-1}
       \caption{Lake characteristics by categorical variables.}\label{figs3.3}
+      \end{center}
       \end{suppfigure}
 
 \clearpage
 \begin{suppfigure}
+\begin{center}
       \noindent\includegraphics[width=0.85\textwidth]{figures/01_hypsography-1}
       \caption{Hypsography classification by state. Numbers on panel labels indicate the percentage of lakes in each state with a convex versus a concave cross-section shape.}\label{figs3.4}
+      \end{center}
       \end{suppfigure}
 
 \begin{suppfigure}
@@ -233,6 +239,8 @@ Finally, our findings indicate that geometry measures differ according to lake c
       \end{suppfigure}
 
 \begin{suppfigure}
+\begin{center}
       \noindent\includegraphics[width=0.85\textwidth]{figures/02_depth_model_importance-1}
       \caption{Importance plot for random forest variables showing increase in mean square error. Higher values indicate greater importance to model predictions. See Equation 1 for a definition of geometric max depth. HUC4 ID is a 'dummy' variable of geographic (hydrologic subbasin) location.}\label{figs3.6}
+      \end{center}
       \end{suppfigure}

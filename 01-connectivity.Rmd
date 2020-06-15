@@ -31,7 +31,7 @@ Apart from land-use cover, another potential proxy for particulate load fraction
 
 \begin{figure}
   \begin{center}
-    \includegraphics[width=0.7\textwidth,keepaspectratio]{figures/02_conny_metric_key_crop_small}
+    \includegraphics[width=0.75\textwidth,keepaspectratio]{figures/02_conny_metric_key_crop_small}
   \end{center}
   \caption{Connectivity metric definitions along with simplified examples of high and low value lakes that might arise from a binary classification. Both lake-stream-based and stream-based metrics are associated with restrictions on  in-stream transport whereas stream-based metrics are associated with differences in transport of P from terrestrial runoff to streams. We use the term "first order stream" to describe a headwater stream.}\label{fig1.2}
 \end{figure}
@@ -40,7 +40,7 @@ In addition to variation among connectivity metrics and connectivity metric type
 
 \begin{figure}
   \begin{center}
-    \includegraphics[width=0.7\textwidth,keepaspectratio]{figures/03_iws_nws}
+    \includegraphics[width=0.75\textwidth,keepaspectratio]{figures/03_iws_nws}
   \end{center}
   \caption{Diagram showing the lake subwatershed and lake watershed of three lakes. Here the lake subwatershed of lake 3 encompasses the lake subwatershed of lake 2 because it is smaller than 10 ha but it does not encompass the lake subwatershed of lake 1 because it has an area of at least 10 ha. In contrast to the lake subwatershed boundaries, the lake watershed boundaries extend to the headwaters of the lake chain.}\label{fig1.3}
 \end{figure}
@@ -251,7 +251,7 @@ Our study lakes encompassed a range of land-use cover types and nutrient levels.
 
 \begin{suppfigure}[h]
   \begin{center}
-    \includegraphics[width=0.5\textwidth, height=3.5in,keepaspectratio]{figures/p-retention_vs_percent-ag-1}
+    \includegraphics[width=0.4\textwidth, height=3.5in,keepaspectratio]{figures/p-retention_vs_percent-ag-1}
   \end{center}
   \caption{P retention versus percent agriculture in lake watersheds.}\label{figs1.2}
 \end{suppfigure}
