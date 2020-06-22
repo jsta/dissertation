@@ -247,7 +247,7 @@ It is difficult to examine the uncertainties surrounding the relationship betwee
 \end{suppfigure}
 
 \noindent
-Our study lakes encompassed a range of land-use cover types and nutrient levels. Here, we examined whether a strong relationship of lake P retention with agricultural land use cover could be obscuring relationships with connectivity metrics. We used P retention data from the National Eutrophication Survey [@stachelekNationalEutrophicationSurvey2017] and land cover data from the 1992 National Land Cover Database clipped to lake watersheds and available in the LAGOS-NE dataset [@sorannoLAGOSNEMultiscaledGeospatial2017].
+Our study lakes encompassed a range of land-use cover types and nutrient levels. Here, we examined whether a strong relationship of lake P retention with agricultural land use cover could be obscuring relationships with connectivity metrics. We used P retention data from the National Eutrophication Survey [@stachelekNationalEutrophicationSurvey2018] and land cover data from the 1992 National Land Cover Database clipped to lake watersheds and available in the LAGOS-NE dataset [@sorannoLAGOSNEMultiscaledGeospatial2017].
 
 \begin{suppfigure}[h]
   \begin{center}
