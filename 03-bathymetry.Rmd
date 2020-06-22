@@ -235,7 +235,7 @@ Finally, our findings indicate that geometry measures differ according to lake c
 
 \begin{suppfigure}
       \noindent\includegraphics[width=0.85\textwidth]{figures/01_geometry_grid-1}
-      \caption{Comparison among lake shape and reservoir classes for A-B) distance to deepest point versus distance to lake visual center and C-D) nearshore slope versus inlake slope. A dashed 1:1 line is shown for comparison. Cross-section shape and reservoir class plots are not identical because not all lakes had a reservoir classification exceeding a 0.75 probability confidence level.}\label{figs3.5}
+      \caption{Comparison among lake shape and reservoir classes for A-B) distance to deepest point versus distance to lake visual center and C-D) nearshore land slope versus in-lake slope. A dashed 1:1 line is shown for comparison. Cross-section shape and reservoir class plots are not identical because not all lakes had a reservoir classification exceeding a 0.75 probability confidence level.}\label{figs3.5}
       \end{suppfigure}
 
 \begin{suppfigure}
