@@ -31,6 +31,9 @@ _bookdown_files/stachelek-template.docx
 docs/index.html: index.Rmd _output.yml stachelek-dissertation.pdf
 	Rscript -e "bookdown::render_book('index.Rmd')"
 
+clean:
+	-@rm _bookdown_files/*.nav _bookdown_files/*.aux _bookdown_files/*.snm _bookdown_files/*.toc _bookdown_files/*.out _bookdown_files/*.log _bookdown_files/*.cpc 2>/dev/null || true
+
 # msu-thesis.cls:
 # 	wget http://mirrors.ctan.org/install/macros/latex/contrib/msu-thesis.tds.zip
 # 	unzip -j msu-thesis.tds.zip -d .
