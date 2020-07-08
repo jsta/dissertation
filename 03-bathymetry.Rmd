@@ -207,6 +207,7 @@ Finally, our findings indicate that geometry measures differ according to lake c
 \noindent
 To our knowledge, the present study is the largest and most comprehensive test to date of geometric models of lake depth. Using bathymetry data on approximately 5,000 lakes, we show that proxy slope measures are not representative of true in-lake slope and this leads to inaccuracies in predicting the depth of concave and reservoir lakes. These innaccuracies suggest that caution is warranted in using geometric models for depth prediction in unsampled lakes. Despite these apparent biases, overall prediction accuracy was equivalent to that of prior depth prediction studies ($\pm$ 6-7m). Only our models using a true measure of in-lake slope, which is limited in availability to lakes with bathymetry data and where we already know lake depth, had greater accuracy than that of prior studies ($\pm$ 4.2m). Lack of improved prediction accuracy (short of including data that is unavailable for most lakes) suggests that improved prediction may require new types of data or novel analysis techniques. 
 
+\clearpage
 ## Supplemental information
 
 \def\suppfigurename{Figure S3}
@@ -214,7 +215,7 @@ To our knowledge, the present study is the largest and most comprehensive test t
 
 \begin{suppfigure}[!ht]
       \begin{center}
-      \noindent\includegraphics[width=0.75\textwidth]{figures/00_map_bathy-1}
+      \noindent\includegraphics[width=0.85\textwidth]{figures/00_map_bathy-1}
       \caption{Map of study lakes showing A) lake maximum depth measurements, B) cross-section shape class, and C) reservoir classification.}\label{figs3.1}
       \end{center}
       \end{suppfigure}
