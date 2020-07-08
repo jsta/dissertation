@@ -34,6 +34,9 @@ docs/index.html: index.Rmd _output.yml stachelek-dissertation.pdf
 clean:
 	-@rm _bookdown_files/*.nav _bookdown_files/*.aux _bookdown_files/*.snm _bookdown_files/*.toc _bookdown_files/*.out _bookdown_files/*.log _bookdown_files/*.cpc 2>/dev/null || true
 
+ksc_response.pdf: ksc_response.md
+	pandoc $< -H quote_setup.tex -V geometry:margin=1in -o $@
+
 # msu-thesis.cls:
 # 	wget http://mirrors.ctan.org/install/macros/latex/contrib/msu-thesis.tds.zip
 # 	unzip -j msu-thesis.tds.zip -d .
