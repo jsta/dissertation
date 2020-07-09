@@ -1,5 +1,6 @@
 FROM rocker/verse as dev
 # install texlive packages
+RUN tlmgr update --self
 RUN tlmgr install \
     memoir \
     lm-math \
