@@ -37,6 +37,9 @@ clean:
 ksc_response.pdf: ksc_response.md
 	pandoc $< -H quote_setup.tex -V geometry:margin=1in -o $@
 
+_bookdown_files/diff.pdf: _bookdown_files/old.tex stachelek-dissertation.pdf
+	Rscript -e 'setwd("_bookdown_files"); tinytex::tlmgr_path(); latexdiffr::latexdiff("old.tex", "stachelek-dissertation_mod.tex")'
+
 # msu-thesis.cls:
 # 	wget http://mirrors.ctan.org/install/macros/latex/contrib/msu-thesis.tds.zip
 # 	unzip -j msu-thesis.tds.zip -d .
