@@ -13,3 +13,16 @@ In Chapter 3, I tested the assumptions of geometric models of lake depth using b
 Throughout the process of writing this Dissertation I noticed several commonalities amongst each chapter. One commonality was simply the large number of modeling choices that underpin each result. My hope is that the most important of these choices is reflected in the text and the remaining ones are sufficiently documented in the code supplements accompanying each chapter. In some cases, I was fortunate to have the opportunity to explore the sensitivity of my model results to each choice. However, the sheer number of these choices made it intractable to test them all. Choices such as what type of regionalization to use or how and when to aggregate data from one spatial scale to another were not always straightforward. Future exploration of these choices would likely go a long way in strengthening our understanding of spatial patterning of lake characteristics at macroscales and generating exciting new research questions.
 
 A second commonality I found was that models incorporating spatial variation are often superior in terms of predictive performance and model fit relative to non-spatial models. However, I only really interrogated one level of spatial variation, which was variation within and among hydrologic subbasins. The question of why two neighboring lakes might differ in terms of trophic status despite having nearly identical land-use, nutrient loading, morphometry, and climate remains largely unresolved by my analyses. Answering this question may require the application of new techniques considering spatial autocorrelation within stream networks or new data types derived from the output of fine-scale hydrologic models. Exploring these is likely to be critical for resolving the types of local-scale spatial variation which is so important for the management of freshwater ecosystems.
+
+\clearpage
+\hypertarget{references}{%
+\chapter*[References]{
+  \hspace{0pt}
+    \vfill
+    References
+    \vfill
+  \hspace{0pt}
+}\label{references}}
+\addcontentsline{toc}{chapter}{References}
+\renewcommand{\bibsection}{}
+\clearpage
