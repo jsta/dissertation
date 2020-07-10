@@ -1,6 +1,5 @@
-all: stachelek-dissertation.pdf docs/index.html
+all: stachelek-dissertation.pdf docs/index.html _bookdown_files/msu-thesis.cls
 
-# msu-thesis.cls
 stachelek-dissertation.pdf: _bookdown.yml _output.yml scripts/fix-tex.R \
 _bookdown_files/jsta.bst \
 index.Rmd \
@@ -30,6 +29,9 @@ _bookdown_files/stachelek-template.docx
 
 docs/index.html: index.Rmd _output.yml stachelek-dissertation.pdf
 	Rscript -e "bookdown::render_book('index.Rmd')"
+
+_bookdown_files/msu-thesis.cls: msu-thesis.cls
+	rsync -av msu-thesis.cls _bookdown_files/msu-thesis.cls
 
 clean:
 	-@rm _bookdown_files/*.nav _bookdown_files/*.aux _bookdown_files/*.snm _bookdown_files/*.toc _bookdown_files/*.out _bookdown_files/*.log _bookdown_files/*.cpc 2>/dev/null || true
