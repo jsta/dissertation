@@ -228,7 +228,7 @@ Due to a lack of temporally resolved data, our study focused on spatial patterns
 We show that granular measures of agricultural activity are related to both lake N and P and that these relationships are regionally variable for lake N. Taken together, our results suggest that lake TP concentrations are more strongly driven by lake characteristics; whereas, lake TN concentrations are more strongly driven by watershed land-use. A consequence of our finding is that lake TP concentrations are largely predictable from lake-specific measures such as near-stream land-use, lake depth, and transport metrics like baseflow; whereas, accurate predictions of lake N likely requires not only lake specific information (including granular measures of agriculture) but also consideration of regional context due to complex regional variation of soil characteristics. Such differences in lake nutrient model sensitivity to measures of agricultural activity may affect the outcome of policies to enhance water quality depending on whether they focus on lake N or P.
 
 \clearpage
-\FloatBarrier
+
 ## Supplemental information
 
 \def\suppfigurename{Figure S2}
@@ -241,7 +241,7 @@ We show that granular measures of agricultural activity are related to both lake
   \caption{Example of increasing granularity for total Ag to Ag versus pasture, to pasture versus specific crops. For illustration, only corn, soybeans, and pasture are shown rather than all CDL land-use categories.}\label{figs2.1}
   \end{suppfigure}
 
-\begin{supptable}
+\begin{supptable}[h]
   \centering
 \begin{tabular}{l l}
 \toprule
