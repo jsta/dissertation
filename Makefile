@@ -38,6 +38,9 @@ _bookdown_files/msu-thesis.cls: msu-thesis.cls
 _bookdown_files/dissertation.bib: dissertation.bib
 	rsync -av dissertation.bib _bookdown_files/dissertation.bib
 
+bookdownfigures:
+	rsync -av figures _bookdown_files
+
 clean:
 	-@rm _bookdown_files/*.nav _bookdown_files/*.aux _bookdown_files/*.snm _bookdown_files/*.toc _bookdown_files/*.out _bookdown_files/*.log _bookdown_files/*.cpc 2>/dev/null || true
 
