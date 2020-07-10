@@ -34,7 +34,7 @@ From the command line type: `$ make all`
 
 * Bibtex files are listed in [index.Rmd](index.Rmd), stored in the top level folder, **and** symlinked (or copied) to the `_bookdown_files` directory
 
-* Figures are stored under [figures](figures) and copied to [_bookdown_files/figures]
+* Figures are stored under [figures](figures) and copied to [_bookdown_files/figures](_bookdown_files/figures)
 
 * Formatting of figure and table captions for supplementary material is set in [preamble.tex](preamble.tex)
 
