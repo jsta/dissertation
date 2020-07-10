@@ -239,17 +239,18 @@ We provide evidence that freshwater connectivity has an effect on lake P retenti
 \noindent
 It is difficult to examine the uncertainties surrounding the relationship between water residence time and lake P retention because empirical measures of these quantities do not exist for many lakes. One of the few comprehensive sources of these data is modelling studies which produce largely unverified estimates of water residence time and P retention [@milsteadEstimatingSummerNutrient2013]. Such model output data may not be appropriate for statistical P retention modelling because P retention and water residence time values are not independently estimated. As an alternative, we performed a more qualitative analysis fitting separate smoothed functions to lakes of differing connectivity (see appendix source code for details). Specifically, we used the connectivity data provided in LAGOS-NE [@sorannoLAGOSNEMultiscaledGeospatial2017] and described in detail by [@fergusFreshwaterLandscapeLake2017] where lakes are grouped based on whether they have upstream lake connections (DR_LakeStream), or upstream stream connections (DR_Stream), are headwater lakes, or are isolated lakes.
 
-\begin{suppfigure}[h]
+\begin{suppfigure}[h!]
   \begin{center}
     \includegraphics[width=0.6\textwidth, height=3.5in,keepaspectratio]{figures/milstead_reanalysis-1}
   \end{center}
   \caption{Relationship between residence time and phosphorus retention for inland lakes with surface area greater than 4 ha in Northeastern USA (New England). Vertical dashed lines denote lakes with intermediate residence times (within the interquartile range). Best fit lines are colored based on whether they have upstream lake connections (DR\_LakeStream), or upstream stream connections (DR\_Stream), are headwater lakes, or are isolated lakes. Data from \citep{milsteadEstimatingSummerNutrient2013}.}\label{figs1.1}
 \end{suppfigure}
+\FloatBarrier
 
 \noindent
 Our study lakes encompassed a range of land-use cover types and nutrient levels. Here, we examined whether a strong relationship of lake P retention with agricultural land use cover could be obscuring relationships with connectivity metrics. We used P retention data from the National Eutrophication Survey [@stachelekNationalEutrophicationSurvey2018] and land cover data from the 1992 National Land Cover Database clipped to lake watersheds and available in the LAGOS-NE dataset [@sorannoLAGOSNEMultiscaledGeospatial2017].
 
-\begin{suppfigure}[h]
+\begin{suppfigure}[h!]
   \begin{center}
     \includegraphics[width=0.4\textwidth, height=3.5in,keepaspectratio]{figures/p-retention_vs_percent-ag-1}
   \end{center}
@@ -259,7 +260,7 @@ Our study lakes encompassed a range of land-use cover types and nutrient levels.
 \noindent
 Although our study considered many lakes spread across a broad spatial extent, we wanted to assess whether their basic characteristics were representative of lakes in general. We compared water quality (total phosphorus, chlorophyll concentration, and Secchi depth) of the lakes in our study with other US lakes as measured by the stratified random sampling design of the National Lakes Assessment (NLA) lake population [@usepa_nla2012]. Our lakes are similar in most respects except that they are substantially larger and deeper than most NLA lakes.
 
-\begin{suppfigure}[h]
+\begin{suppfigure}[h!]
   \begin{center}
     \includegraphics[width=0.6\textwidth, height=3.5in,keepaspectratio]{figures/nes_vs_nla-1}
   \end{center}
