@@ -428,7 +428,7 @@
 	\clearpage
 	\thispagestyle{empty}
 	\vspace*{7in}
-	{\raggedleft Copyright by\\\MakeUppercase{\theauthor}\\\thedate\\}% Author now uppercase 6/5/12
+	{\raggedright Copyright by\\\MakeUppercase{\theauthor}\\\thedate\\}% Author now uppercase 6/5/12
 	\clearpage}
 
 % make the dedication page
