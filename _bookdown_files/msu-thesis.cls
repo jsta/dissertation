@@ -224,7 +224,7 @@
 
 % make title 2in from top of page
 % This value is crazy because the grad school doesn’t know how to measure
-\setlength{\droptitle}{0.75in} % changed again due to topskip removal 12/13/17
+\setlength{\droptitle}{0.3in} % changed again due to topskip removal 12/13/17
 
 % set up the title page
 % Because the title is set to \MakeUppercase we need to \protect line
