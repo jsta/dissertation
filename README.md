@@ -4,12 +4,6 @@
 
 pdf: [stachelek-dissertation.pdf](stachelek-dissertation.pdf)
 
-## Timeline
-
-June 18 - Dissertation draft due to commitee
-
-August 19 - Approval deadline at Grad School
-
 ## Prerequsites
 
 ### R packages
@@ -20,15 +14,12 @@ August 19 - Approval deadline at Grad School
  
 ### LaTeX packages
 
-See [Dockerfile](Dockerfile)
+See [Dockerfile](Dockerfile). Install with `tinytex::tlmgr_install("package")`.
 
 ## Building
 
 ### pdf + html
 `$ make all`
-
-### docx
-`$ make stachelek-dissertation.docx`
 
 ## Editing
 
@@ -47,8 +38,7 @@ See [Dockerfile](Dockerfile)
 ## Reproducibility
 
 ```
-docker pull jsta/dissertation:latest
-# docker build -t jsta/dissertation:latest .
+docker build -t jsta/dissertation:latest .
 docker create --name dissertation3 jsta/dissertation
 docker cp dissertation3:~/stachelek-dissertation.pdf test.pdf
 ```
