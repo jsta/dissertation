@@ -26,3 +26,4 @@ A second commonality I found was that models incorporating spatial variation are
 \addcontentsline{toc}{chapter}{References}
 \renewcommand{\bibsection}{}
 \clearpage
+\linespread{1}\selectfont
