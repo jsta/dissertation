@@ -1,10 +1,12 @@
-all: stachelek-dissertation.pdf docs/index.html _bookdown_files/msu-thesis.cls
+all: stachelek-dissertation.pdf docs/index.html
 
 stachelek-dissertation.pdf: _bookdown.yml _output.yml scripts/fix-tex.R \
 _bookdown_files/jsta.bst \
 index.Rmd \
 msu-thesis.cls \
 dissertation.bib \
+_bookdown_files/msu-thesis.cls \
+_bookdown_files/dissertation.bib \
 correct-front-matter.tex \
 01-connectivity.Rmd \
 02-ag.Rmd \
@@ -32,6 +34,9 @@ docs/index.html: index.Rmd _output.yml stachelek-dissertation.pdf
 
 _bookdown_files/msu-thesis.cls: msu-thesis.cls
 	rsync -av msu-thesis.cls _bookdown_files/msu-thesis.cls
+
+_bookdown_files/dissertation.bib: dissertation.bib
+	rsync -av dissertation.bib _bookdown_files/dissertation.bib
 
 clean:
 	-@rm _bookdown_files/*.nav _bookdown_files/*.aux _bookdown_files/*.snm _bookdown_files/*.toc _bookdown_files/*.out _bookdown_files/*.log _bookdown_files/*.cpc 2>/dev/null || true
