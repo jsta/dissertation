@@ -1,5 +1,7 @@
 ## Spatial Patterning of Lake Nutrients and Morphometry at Macroscales: Importance of Regional Factors and Aquatic-Terrestrial Linkages
 
+> J. Stachelek, Michigan State University, 2020
+
 ## Products
 
 pdf: [stachelek-dissertation.pdf](stachelek-dissertation.pdf)
@@ -19,17 +21,20 @@ See [Dockerfile](Dockerfile). Install with `tinytex::tlmgr_install("package")`.
 ## Building
 
 ### pdf + html
-`$ make all`
+
+From the command line type: `$ make all`
 
 ## Editing
 
-* The title page, abstract, preface, and introduction source is set in [correct-front-matter.tex](correct-front-matter.tex) and relevant sections copied to [index.Rmd](index.Rmd)
+* The title page, abstract, preface, and introduction source is set in [correct-front-matter.tex](correct-front-matter.tex). Relevant sections need to be copied to [index.Rmd](index.Rmd) if attemping to build an html version.
 
 * Each individual chapter is a numbered Rmd file in the top level folder.
 
 * End matter is set in [end.Rmd](end.Rmd)
 
 * Bibtex files are listed in [index.Rmd](index.Rmd), stored in the top level folder, **and** symlinked (or copied) to the `_bookdown_files` directory
+
+* Figures are stored under [figures](figures) and copied to [_bookdown_files/figures]
 
 * Formatting of figure and table captions for supplementary material is set in [preamble.tex](preamble.tex)
 
