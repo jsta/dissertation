@@ -1,6 +1,6 @@
 --- 
 title: "Spatial patterning of lake nutrients and morphometry at macroscales: importance of regional factors and aquatic-terrestrial linkages"
-author: "Joseph Stachelek"
+author: "Jemma Stachelek"
 date: "2020"
 site: bookdown::bookdown_site
 output: bookdown::pdf_book
